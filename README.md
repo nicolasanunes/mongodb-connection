@@ -77,7 +77,7 @@ volumes:
  mongodbdata:
 ```
 
-Criar na pasta "/src/db" o arquivo "db.config.ts" e configurar o arquivo de acordo com os dados de conexão do banco de dados
+Criar na pasta "/src/db" o arquivo "db.config.service.ts" e configurar o arquivo de acordo com os dados de conexão do banco de dados
 ```bash
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
@@ -101,7 +101,7 @@ export class DbConfigService implements TypeOrmOptionsFactory {
 }
 ```
 
-Importar a configuração para "app.module.ts" passando a constante "dbConfig" no TypeOrmModule.forRoot().
+Importar a configuração para "app.module.ts" passando a constante "dbConfigService"
 ```bash
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
