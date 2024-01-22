@@ -56,7 +56,7 @@ DB_NAME=db_name
 DB_ADMIN_EMAIL=myEmail
 ```
 
-Criar o arquivo docker-compose.yaml com as variáveis corretas do respectivo banco de dados
+Criar o arquivo docker-compose.yaml com as variáveis corretas do respectivo banco de dados na raiz do projeto
 ```bash
 version: '3.1'
 
