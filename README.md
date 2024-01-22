@@ -26,27 +26,27 @@ Criar o projeto com NestJS
 $ nest new project-name
 ```
 
-// Instalar class-validator
+Instalar class-validator
 ```bash
 $ npm i --save @nestjs/class-validator
 ```
 
-// Instalar o TypeORM com o respectivo banco de dados
+Instalar o TypeORM com o respectivo banco de dados
 ```bash
 $ npm i @nestjs/typeorm typeorm mongodb
 ```
 
-// Instalar o dotenv para permitir o uso do arquivo oculto .env
+Instalar o dotenv para permitir o uso do arquivo oculto .env
 ```bash
 $ npm i dotenv
 ```
 
-// Instalar a config para pegar as informações do arquivo .env
+Instalar a config para pegar as informações do arquivo .env
 ```bash
 $ npm i @nestjs/config
 ```
 
-// Criar o arquivo .env na raiz do projeto
+Criar o arquivo .env na raiz do projeto
 ```bash
 DB_HOST=127.0.0.1
 DB_PORT=27017
@@ -56,7 +56,7 @@ DB_NAME=db_name
 DB_ADMIN_EMAIL=myEmail
 ```
 
-// Criar o arquivo docker-compose.yaml com as variáveis corretas do respectivo banco de dados
+Criar o arquivo docker-compose.yaml com as variáveis corretas do respectivo banco de dados
 ```bash
 version: '3.1'
 
@@ -66,8 +66,8 @@ services:
     image: mongo:latest
     container_name: mongodb
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=root
+      - MONGO_INITDB_ROOT_USERNAME=myUser
+      - MONGO_INITDB_ROOT_PASSWORD=myPasswd
     volumes:
       - mongodbdata:/data/db
     ports:
@@ -77,7 +77,7 @@ volumes:
  mongodbdata:
 ```
 
-// Criar na pasta "/src/db" o arquivo "db.config.ts" e configurar o arquivo de acordo com os dados de conexão do banco de dados
+Criar na pasta "/src/db" o arquivo "db.config.ts" e configurar o arquivo de acordo com os dados de conexão do banco de dados
 ```bash
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
