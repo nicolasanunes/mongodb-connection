@@ -1,6 +1,6 @@
-## Description
+## Descrição
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Projeto em NestJS com TypeScript com o intuito de demonstrar o passo a passo para a conexão com um banco de dados MongoDB criado no Docker. TypeORM utilizado como ORM e Node.js como interpretador do código.
 
 ## Criar um container no Docker com o MongoDB
 
